@@ -1,0 +1,16 @@
+.Toolbar {
+  height: 60px;
+  background-color: #4682b4;
+  width: 100%;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Toolbar h1 {
+  font-size: 18px;
+  margin-left: 50px;
+  transform: rotate(-5deg);
+  background-color: #4682b4;
+}

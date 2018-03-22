@@ -1,0 +1,23 @@
+.NavigationItem {
+  height: 100%;
+}
+
+.NavigationItem a {
+  display: block;
+  background-color: #4682b4;
+  border: none;
+  border-left: 1px solid #006994;
+  border-right: 1px solid #006994;
+  box-sizing: border-box;
+  height: 100%;
+  color: white;
+  padding: 0 10px;
+  transition: all 0.2s ease-out;
+  text-decoration: none;
+  padding-top: 18px;
+}
+
+.NavigationItem a:hover {
+  cursor: pointer;
+  background-color: #006994;
+}
