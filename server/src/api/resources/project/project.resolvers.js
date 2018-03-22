@@ -1,7 +1,7 @@
 import { Project } from "./project.model";
 
 //Queries
-const getAllProjectByOwnerId = (parentValue, __, { user }) => {
+const getAllProjectsByOwner = (parentValue, __, { user }) => {
   return Project.find({ owner: user }).exec();
 };
 
@@ -16,9 +16,17 @@ const createProject = (parentValue, { input }, ___) => {
 
 export const projectResolvers = {
   Query: {
-    getAllProjectByOwnerId
+    getAllProjectsByOwner
   },
   Mutation: {
     createProject
+  },
+
+  Project: {
+    async owner(project) {
+      const populated = await project.populate("owner").execPopulate();
+
+      return populated.owner;
+    }
   }
 };
